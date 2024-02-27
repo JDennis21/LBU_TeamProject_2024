@@ -1,4 +1,3 @@
-/*homePage*/
 .main {
     width: 100%;
     height: 100%;
@@ -6,57 +5,55 @@
 
 nav {
     width: 100%;
-    height: 6%;
-    margin: auto;
-    padding: 0.5em 0 2em 0;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-    position: relative;
-    top: 50%;
-    transform:  translateY(-50%);
     color: #4b0082;
     font-size: 3em;
     padding-left: 0.5em;
-    float: left;
 }
 
-.logo a {
+.logo a,
+.logo a:visited {
     text-decoration: none;
     color: #4b0082;
+    transition: 0.5s;
+}
+
+.logo a:hover {
+    color: #8d0ec2;
 }
 
 .menu {
     height: 100%;
-    float: right;
-    justify-content: center;
+    display: flex;
     align-items: center;
 }
 
 .menu ul {
+    height: 100%;
     display: flex;
+    align-items: center;
 }
 
 .menu ul li {
     list-style: none;
     margin-right: 1em;
     font-size: 1em;
-    text-align: center;
 }
 
-.menu ul li a, .menu ul li a:visited {
+.menu ul li a,
+.menu ul li a:visited {
     text-decoration: none;
     font-weight: bold;
-    transition: 500ms;
-    color: indigo;
+    transition: 0.5s;
+    color: #4b0082;
 }
 
 .menu ul li a:hover {
     color: #8d0ec2;
-}
-
-.content {
-    justify-content: center;
-    align-content: center;
-    margin: 0 1em 0 1em;
 }

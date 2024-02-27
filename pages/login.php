@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="../css/main.css" rel="stylesheet" type="text/css" />
-    <link href="../css/homePage.css" rel="stylesheet" type="text/css" />
+    <link href="../css/login.css" rel="stylesheet" type="text/css" />
     <title>Site Name</title>
 </head>
 <body>
@@ -20,10 +20,14 @@
         </div>
     </nav>
     <div class="content">
-
-    </div>
-    <div class="footer">
-
+        <div class="loginForm">
+            <h2>Login</h2>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <a href="../pages/signup.php">Don't have an account?</a>
+                <input type="submit" value="Sign Up">
+        </div>
     </div>
 </div>
 </body>
