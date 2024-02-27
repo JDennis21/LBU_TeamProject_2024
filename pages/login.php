@@ -15,18 +15,24 @@
         <div class="menu">
             <ul>
                 <li><a href="../pages/signup.php">Sign Up</a></li>
-                <li><a href="../pages/login.php">Login</a></li>
             </ul>
         </div>
     </nav>
     <div class="content">
-        <div class="loginForm">
-            <h2>Login</h2>
-            <form action="#" method="post">
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <a href="../pages/signup.php">Don't have an account?</a>
-                <input type="submit" value="Sign Up">
+        <div class="formContainer">
+            <div class="loginForm">
+                <h2>Login</h2>
+                <form action="#" method="post">
+                    <label for="loginEmail">Email address</label>
+                    <input type="email" name="email" id="loginEmail">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" name="password" id="loginPassword">
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+            <div class="signupBox">
+                <p>Don't have an account with us? <a href="../pages/signup.php">Sign up</a></p>
+            </div>
         </div>
     </div>
 </div>

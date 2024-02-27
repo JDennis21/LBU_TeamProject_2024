@@ -9,6 +9,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 0.1em solid #ccc;
+    box-sizing: border-box;
 }
 
 .logo {

@@ -9,6 +9,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 0.1em solid #ccc;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -20,7 +22,7 @@ nav {
 .logo a,
 .logo a:visited {
     text-decoration: none;
-    color: #4b0082;
+    color: #007bff;
     transition: 0.5s;
 }
 
@@ -51,7 +53,7 @@ nav {
     text-decoration: none;
     font-weight: bold;
     transition: 0.5s;
-    color: #4b0082;
+    color: #007bff;
 }
 
 .menu ul li a:hover {
@@ -66,34 +68,43 @@ nav {
     margin: 0 1em 0 1em;
 }
 
-.loginForm {
-    background-color: #fff;
-    padding: 20px;
-    border: 0.2em solid black;
-    border-radius: 0.5em;
-    box-shadow: 0 0 1em 0 rgba(0,0,0,0.1);
-    height: 70%;
+.formContainer {
+    height: fit-content;
     width: 25%;
 }
+
+.loginForm {
+    width: 100%;
+    height: fit-content;
+    background-color: #fff;
+    padding: 1.5em;
+    border: 0.15em solid black;
+    border-radius: 0.5em 0.5em 0 0;
+    box-shadow: 0 0 1em 0 rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
 .loginForm h2 {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 1em;
 }
+
 .loginForm input[type="text"],
 .loginForm input[type="email"],
 .loginForm input[type="password"] {
     width: 100%;
     padding: 0.8em;
-    margin-bottom: 1.2em;
+    margin-bottom: 2em;
     border: 0.1em solid #ccc;
     border-radius: 0.5em;
     box-sizing: border-box;
 }
+
 .loginForm input[type="submit"] {
     width: 100%;
     padding: 0.8em;
-    margin-top: 1.2em;
+    margin-bottom: 2em;
     border-radius: 0.5em;
     border: none;
     background-color: #007bff;
@@ -101,6 +112,44 @@ nav {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .loginForm input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+.loginForm label {
+    color: #707070;
+}
+
+.signupBox {
+    width: 100%;
+    height: fit-content;
+    background-color: #f5f5f5;
+    padding: 1.5em;
+    border: 0.15em solid black;
+    border-top: none;
+    border-radius: 0 0 0.5em 0.5em;
+    box-shadow: 0 0 1em 0 rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.signupBox {
+    text-align: center;
+}
+
+.signupBox p {
+    padding: 0;
+    margin: 0;
+}
+
+.signupBox a,
+.signupBox a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.5s;
+    color: #4b0082;
+}
+
+.signupBox a:hover {
+    color: #8d0ec2;
 }

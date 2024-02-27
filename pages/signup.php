@@ -19,14 +19,22 @@
         </div>
     </nav>
     <div class="content">
-        <div class="signupForm">
-            <h2>Sign Up</h2>
-            <form action="#" method="post">
-                <input type="text" name="fullname" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <a href="../pages/login.php">Already have and account?</a>
-                <input type="submit" value="Sign Up">
+        <div class="formContainer">
+            <div class="signupForm">
+                <h2>Sign Up</h2>
+                <form action="#" method="post">
+                    <label for="signupName">Full name</label>
+                    <input type="text" name="fullName" id="signupName">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" name="email" id="signupEmail">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" name="password" id="signupPassword">
+                    <input type="submit" value="Sign Up">
+                </form>
+            </div>
+            <div class="loginBox">
+                <p>Already have an account with us? <a href="../pages/login.php">Login</a></p>
+            </div>
         </div>
     </div>
 </div>
