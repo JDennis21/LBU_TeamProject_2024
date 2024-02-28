@@ -31,7 +31,8 @@ if (isset($_SESSION['username'])) {
                 <h2>Login</h2>
                 <form action="../login/login.php" method="post">
                     <label for="loginUsername">Username</label>
-                    <input type="text" name="username" id="loginUsername">
+                    <input type="text" name="username" id="loginUsername"
+                           value="<?php echo $_SESSION['usernameAttempt'] ?? '' ?>">
                     <label for="loginPassword">Password</label>
                     <input type="password" name="password" id="loginPassword">
                     <p class="error"><?php if (isset($_SESSION["error"])) {

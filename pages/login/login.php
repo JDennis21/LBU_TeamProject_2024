@@ -2,7 +2,7 @@
 include '../connection.php';
 global $connection;
 
-$username = $_POST["username"];
+$username = $_SESSION["usernameAttempt"] = $_POST["username"];
 $userPass = $_POST["password"];
 
 $query = "SELECT * FROM users WHERE username = '$username' and userPass = '" . md5($userPass) . "';";
