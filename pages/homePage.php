@@ -1,3 +1,4 @@
+<?php include_once "../pages/connection.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +11,12 @@
 <div class="main">
     <nav>
         <div class="logo">
-            <a href="../pages/homePage.html">logo</a>
+            <a href="../pages/homePage.php">logo</a>
         </div>
         <div class="menu">
             <ul>
-                <li><a href="../pages/signup.php">Sign Up</a></li>
-                <li><a href="../pages/login.php">Login</a></li>
+                <li><a href="signup/signupForm.php">Sign Up</a></li>
+                <li><a href="login/loginForm.php">Login</a></li>
             </ul>
         </div>
     </nav>

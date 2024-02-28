@@ -154,3 +154,7 @@ nav {
 .loginBox a:hover {
     color: #8d0ec2;
 }
+
+.signupForm input.noMargin {
+    margin-bottom: 0;
+}

@@ -5,3 +5,10 @@ body {
     padding: 0;
     height: 100%;
 }
+
+.error {
+    color: darkred;
+    font-weight: bold;
+    margin: 0 0 1em 0;
+    height: fit-content;
+}
