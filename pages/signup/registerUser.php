@@ -7,23 +7,27 @@ function trimString($string): string
     return htmlspecialchars(stripcslashes(trim($string)));
 }
 
-$_SESSION["username"] = trimString($_POST["username"]);
-$_SESSION["email"] = trimString($_POST["email"]);
-$_SESSION["password"] = trimString($_POST["password"]);
+$_SESSION["usernameAttempt"] = trimString($_POST["username"]);
+$_SESSION["emailAttempt"] = trimString($_POST["email"]);
+$_SESSION["passwordAttempt"] = trimString($_POST["password"]);
 
 function checkNotEmpty(): bool
 {
     $valid = true;
 
-    if (empty(trimString($_POST["username"]))) {
+    $username = $_SESSION["usernameAttempt"];
+    $email = $_SESSION["emailAttempt"];
+    $password = $_SESSION["passwordAttempt"];
+
+    if (empty($username)) {
         $_SESSION["nameErr"] = "Username is required";
         $valid = false;
     }
-    if (empty(filter_var(trimString($_POST["email"]), FILTER_SANITIZE_EMAIL))) {
+    if (empty(filter_var($email, FILTER_SANITIZE_EMAIL))) {
         $_SESSION["emailErr"] = "Email is required";
         $valid = false;
     }
-    if (empty(trimString($_POST["password"]))) {
+    if (empty($password)) {
         $_SESSION["passErr"] = "Password is required";
         $valid = false;
     }
@@ -34,9 +38,9 @@ function checkConditions(): bool
 {
     $valid = true;
 
-    $username = $_SESSION["username"];
-    $email = $_SESSION["email"];
-    $password = $_SESSION["password"];
+    $username = $_SESSION["usernameAttempt"];
+    $email = $_SESSION["emailAttempt"];
+    $password = $_SESSION["passwordAttempt"];
 
     if (6 > strlen($username) || strlen($username) > 20) {
         $_SESSION["nameErr"] = "Username must be between 6 and 20 characters";
@@ -58,10 +62,12 @@ function checkConditions(): bool
     return $valid;
 }
 
-if (checkConditions() && checkNotEmpty()) {
-    $username = $_SESSION["username"];
-    $email = $_SESSION["email"];
-    $password = md5($_SESSION["password"]);
+$check1 = checkConditions();
+$check2 = checkNotEmpty();
+if ($check1 && $check2) {
+    $username = $_SESSION["usernameAttempt"];
+    $email = $_SESSION["emailAttempt"];
+    $password = md5($_SESSION["passwordAttempt"]);
 
     $query = "INSERT INTO teamproject.`users`
               (`username`, `userEmail`, `userPass`) 
@@ -72,10 +78,12 @@ if (checkConditions() && checkNotEmpty()) {
     $stmt->bind_param("sss", $username, $email, $password);
 
     if ($stmt->execute()) {
-        header("location: ../../pages/climateControl.php");
+        $_SESSION["username"] = $username;
         $stmt->close();
+        header("location: ../../pages/climateControl.php");
+    } else {
+        $_SESSION["status"] = "Could not complete registration";
     }
 } else {
-    $_SESSION["status"] = "Could not complete registration";
+    header("location: {$_SERVER['HTTP_REFERER']}");
 }
-header("location: {$_SERVER['HTTP_REFERER']}");

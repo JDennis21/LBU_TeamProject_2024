@@ -15,8 +15,14 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="signup/signupForm.php">Sign Up</a></li>
-                <li><a href="login/loginForm.php">Login</a></li>
+                <?php
+                if (isset($_SESSION["username"])) {
+                    echo '<li><a href="../pages/climateControl.php">Your Account</a></li>';
+                } else {
+                    echo '<li><a href="../pages/signup/signupForm.php">Sign Up</a></li>';
+                    echo '<li><a href="../pages/login/loginForm.php">Login</a></li>';
+                }
+                ?>
             </ul>
         </div>
     </nav>

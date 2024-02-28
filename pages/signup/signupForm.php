@@ -31,7 +31,7 @@
                 <form action="../signup/registerUser.php" method="post">
                     <label for="signupUsername">Username</label>
                     <input type="text" name="username" id="signupUsername" class="<?php echo $usernameClass; ?>"
-                           value="<?php echo $_SESSION['username'] ?? '' ?>">
+                           value="<?php echo $_SESSION['usernameAttempt'] ?? '' ?>">
                     <?php
                     if (isset($_SESSION["nameErr"])) {
                         echo '<p class="error">*' . $_SESSION["nameErr"] . '</p>';
@@ -39,7 +39,7 @@
                     ?>
                     <label for="signupEmail">Email</label>
                     <input type="email" name="email" id="signupEmail" class="<?php echo $emailClass; ?>"
-                           value="<?php echo $_SESSION['email'] ?? '' ?>">
+                           value="<?php echo $_SESSION['emailAttempt'] ?? '' ?>">
                     <?php
                     if (isset($_SESSION["emailErr"])) {
                             echo '<p class="error">*' . $_SESSION["emailErr"] . '</p>';
@@ -53,6 +53,11 @@
                     }
                     ?>
                     <input type="submit" value="Sign Up">
+                    <?php
+                    if (isset($_SESSION["status"])) {
+                    echo '<p class="error">*' . $_SESSION["status"] . '</p>';
+                    }
+                    ?>
                 </form>
             </div>
             <div class="loginBox">

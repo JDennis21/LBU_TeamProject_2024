@@ -1,4 +1,10 @@
-<?php include_once "../../pages/connection.php"; ?>
+<?php
+include '../connection.php';
+if (isset($_SESSION['username'])) {
+    header("location: ../../pages/climateControl.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,8 +30,8 @@
             <div class="loginForm">
                 <h2>Login</h2>
                 <form action="../login/login.php" method="post">
-                    <label for="loginEmail">Email address</label>
-                    <input type="email" name="email" id="loginEmail">
+                    <label for="loginUsername">Username</label>
+                    <input type="text" name="username" id="loginUsername">
                     <label for="loginPassword">Password</label>
                     <input type="password" name="password" id="loginPassword">
                     <p class="error"><?php if (isset($_SESSION["error"])) {
