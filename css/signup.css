@@ -1,0 +1,98 @@
+/*signup.css*/
+.content {
+    height: 92%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1em 0 1em;
+}
+
+.formContainer {
+    height: fit-content;
+    width: 25%;
+}
+
+.signupForm {
+    width: 100%;
+    height: fit-content;
+    background-color: #fff;
+    padding: 1.5em;
+    border: 0.15em solid black;
+    border-radius: 0.5em 0.5em 0 0;
+    box-shadow: 0 0 1em 0 rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.signupForm h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.signupForm input[type="text"],
+.signupForm input[type="email"],
+.signupForm input[type="password"] {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 2em;
+    border: 0.1em solid #ccc;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+}
+
+.signupForm input[type="submit"] {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 2em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signupForm input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.signupForm label {
+    color: #707070;
+}
+
+.loginBox {
+    width: 100%;
+    height: fit-content;
+    background-color: #f5f5f5;
+    padding: 1.5em;
+    border: 0.15em solid black;
+    border-top: none;
+    border-radius: 0 0 0.5em 0.5em;
+    box-shadow: 0 0 1em 0 rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.loginBox {
+    text-align: center;
+}
+
+.loginBox p {
+    padding: 0;
+    margin: 0;
+}
+
+.loginBox a,
+.loginBox a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.5s;
+    color: #4b0082;
+}
+
+.loginBox a:hover {
+    color: #8d0ec2;
+}
+
+.signupForm input.noMargin {
+    margin-bottom: 0;
+}
