@@ -3,15 +3,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="../../css/main.css" rel="stylesheet" type="text/css" />
-    <link href="../../css/signup.css" rel="stylesheet" type="text/css" />
+    <link href="/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="/css/signup.css" rel="stylesheet" type="text/css" />
     <title>Site Name</title>
 </head>
 <body>
 <div class="main">
     <nav>
         <div class="logo">
-            <a href="../homePage.php">logo</a>
+            <a href="../homePage/homePage.php">logo</a>
         </div>
         <div class="menu">
             <ul>

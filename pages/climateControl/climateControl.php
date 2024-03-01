@@ -1,5 +1,5 @@
 <?php
-include '../pages/connection.php';
+include '../../pages/connection.php';
 global $connection;
 
 if (!isset($_SESSION['username'])) {
@@ -10,19 +10,19 @@ if (!isset($_SESSION['username'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="../css/main.css" rel="stylesheet" type="text/css" />
-    <link href="../css/climateControl.css" rel="stylesheet" type="text/css" />
+    <link href="/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="/css/climateControl.css" rel="stylesheet" type="text/css" />
     <title>Site Name</title>
 </head>
 <body>
 <div class="main">
     <nav>
         <div class="logo">
-            <a href="../pages/homePage.php">logo</a>
+            <a href="../homePage/homePage.php">logo</a>
         </div>
         <div class="menu">
             <ul>
-                <li><a href="../pages/signOut.php">Sign Out</a></li>
+                <li><a href="../signOut.php">Sign Out</a></li>
             </ul>
         </div>
     </nav>

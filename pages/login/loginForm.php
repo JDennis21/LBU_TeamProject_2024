@@ -1,7 +1,7 @@
 <?php
 include '../connection.php';
 if (isset($_SESSION['username'])) {
-    header("location: ../../pages/climateControl.php");
+    header("location: ../../pages/climateControl/climateControl.php");
     exit();
 }
 ?>
@@ -9,15 +9,15 @@ if (isset($_SESSION['username'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="../../css/main.css" rel="stylesheet" type="text/css" />
-    <link href="../../css/login.css" rel="stylesheet" type="text/css" />
+    <link href="/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="/css/login.css" rel="stylesheet" type="text/css" />
     <title>Site Name</title>
 </head>
 <body>
 <div class="main">
     <nav>
         <div class="logo">
-            <a href="../homePage.php">logo</a>
+            <a href="../homePage/homePage.php">logo</a>
         </div>
         <div class="menu">
             <ul>
