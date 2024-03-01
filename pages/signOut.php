@@ -2,4 +2,4 @@
 Session_start();
 Session_destroy();
 
-header('Location: ../pages/homePage.php');
+header('Location: ../pages/homePage/homePage.php');
