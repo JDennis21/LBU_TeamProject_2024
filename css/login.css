@@ -44,7 +44,7 @@
 .loginForm input[type="submit"] {
     width: 100%;
     padding: 0.8em;
-    margin-bottom: 2em;
+    margin-bottom: 0;
     border-radius: 0.5em;
     border: none;
     background-color: #007bff;
@@ -59,6 +59,26 @@
 
 .loginForm label {
     color: #707070;
+}
+
+.loginForm input.noMargin {
+    margin-bottom: 0;
+}
+
+.forgotEmail {
+    margin-top: 0.5em;
+}
+
+.forgotEmail a,
+.forgotEmail a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.5s;
+    color: #3a3153;
+}
+
+.forgotEmail a:hover {
+    color: #5f43b2;
 }
 
 .signupBox {

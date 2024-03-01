@@ -20,13 +20,14 @@ function cleanString(string $inputString): string
 /* Clean the user input before processing and assign it to a session so that it can be used for form memory */
 $_SESSION["usernameAttempt"] = cleanString($_POST["username"]);
 $_SESSION["emailAttempt"] = cleanString($_POST["email"]);
+$_SESSION["nameAttempt"] = cleanString($_POST["fullName"]);
 $_SESSION["passwordAttempt"] = cleanString($_POST["password"]);
 
 /**
  * Checks if any of the user inputs have been left empty
  *
  * This function checks if any of the user inputs have been left empty. It will run
- * through each input even if the previous if statement was false and generate an error
+ * through each input even if the previous if{} statement was false and generate an error
  * message for each.
  *
  * @return bool Returns true if all inputs pass, if any are left empty, returns false
@@ -37,14 +38,19 @@ function checkNotEmpty(): bool
 
     $username = $_SESSION["usernameAttempt"];
     $email = $_SESSION["emailAttempt"];
+    $fullName = $_SESSION["nameAttempt"];
     $password = $_SESSION["passwordAttempt"];
 
     if (empty($username)) {
-        $_SESSION["nameErr"] = "Username is required";
+        $_SESSION["usernameErr"] = "Username is required";
         $valid = false;
     }
     if (empty(filter_var($email, FILTER_SANITIZE_EMAIL))) {
         $_SESSION["emailErr"] = "Email is required";
+        $valid = false;
+    }
+    if (empty($fullName)) {
+        $_SESSION["nameErr"] = "Username is required";
         $valid = false;
     }
     if (empty($password)) {
@@ -70,16 +76,22 @@ function checkConditions(): bool
 
     $username = $_SESSION["usernameAttempt"];
     $email = $_SESSION["emailAttempt"];
+    $fullName = $_SESSION["nameAttempt"];
     $password = $_SESSION["passwordAttempt"];
 
     /* Ensures length between 6 and 20 characters */
     if (6 > strlen($username) || strlen($username) > 20) {
-        $_SESSION["nameErr"] = "Username must be between 6 and 20 characters";
+        $_SESSION["usernameErr"] = "Username must be between 6 and 20 characters";
         $valid = false;
     }
     /* Ensures that the username only contains letters and numbers */
     if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-        $_SESSION["nameErr"] = "No special characters allowed";
+        $_SESSION["usernameErr"] = "No special characters allowed";
+        $valid = false;
+    }
+    /* Ensures length is lower than 50 characters */
+    if (strlen($fullName) > 50) {
+        $_SESSION["nameErr"] = "Name must be less than 50 characters";
         $valid = false;
     }
     /* Validate the input is a valid email address */
@@ -106,21 +118,22 @@ $check2 = checkNotEmpty();
 if ($check1 && $check2) {
     $username = $_SESSION["usernameAttempt"];
     $email = $_SESSION["emailAttempt"];
+    $fullName = $_SESSION["nameAttempt"];
     $password = md5($_SESSION["passwordAttempt"]);
 
     $query = "INSERT INTO teamproject.`users`
-              (`username`, `userEmail`, `userPass`) 
+              (`username`, `userEmail`,`fullName`, `userPass`) 
               VALUES 
-              (?, ?, ?)";
+              (?, ?, ?, ?)";
 
     $stmt = $connection->prepare($query);
-    $stmt->bind_param("sss", $username, $email, $password);
+    $stmt->bind_param("ssss", $username, $email, $fullName, $password);
 
     /* If data is successfully inserted into database send the user to climateControl.php. Else set error message */
     if ($stmt->execute()) {
         $_SESSION["username"] = $username;
         $stmt->close();
-        header("location: ../../pages/climateControl.php");
+        header("location: ../../pages/climateControl/climateControl.php");
     } else {
         $_SESSION["status"] = "Could not complete registration";
     }

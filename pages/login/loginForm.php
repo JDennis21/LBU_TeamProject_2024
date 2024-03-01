@@ -28,25 +28,32 @@ if (isset($_SESSION['username'])) {
     </nav>
     <div class="content">
         <div class="formContainer">
+            <?php
+            /*
+             * If the session error isset() set the variable to "noMargin" else the variable equals ""
+             *
+             * This is used to remove the margin on form inputs when an error is printed to help with
+             * formatting
+            */
+            $inputClass = isset($_SESSION["error"]) ? 'noMargin' : '';
+            ?>
             <div class="loginForm">
                 <h2>Login</h2>
                 <form action="../login/login.php" method="post">
-                    <!--
-                    If $_SESSION['usernameAttempt'] is set value = $_SESSION['usernameAttempt']
-                    else set value = ''
-                    -->
                     <label for="loginUsername">Username</label>
                     <input type="text" name="username" id="loginUsername"
                            value="<?php echo $_SESSION['usernameAttempt'] ?? '' ?>">
                     <label for="loginPassword">Password</label>
-                    <input type="password" name="password" id="loginPassword">
-                    <!--
-                    If $_SESSION["error"] is set echo the error message with an asterisk appended at the start
-                    -->
-                    <p class="error"><?php if (isset($_SESSION["error"])) {
-                            echo "*" . $_SESSION["error"];
-                        } ?></p>
+                    <input type="password" name="password" id="loginPassword" class="<?php echo $inputClass; ?>">
+                    <?php
+                    if (isset($_SESSION["error"])) {
+                        echo '<p class="error">*' . $_SESSION["error"] . '</p>';
+                    }
+                    ?>
                     <input type="submit" value="Login">
+                    <div class="forgotEmail">
+                        <a href="#">Forgot email?</a>
+                    </div>
                 </form>
             </div>
             <div class="signupBox">
@@ -55,8 +62,8 @@ if (isset($_SESSION['username'])) {
         </div>
     </div>
 </div>
-<!-- Empty $_SESSION["error"] so that the error message is gone after a page refresh -->
 <?php
+/* Empty $_SESSION["error"] so that the error message is gone after a page refresh */
 unset($_SESSION["error"]);
 ?>
 </body>
