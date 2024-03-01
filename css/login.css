@@ -15,7 +15,7 @@
 .loginForm {
     width: 100%;
     height: fit-content;
-    background-color: #fff;
+    background-color: white;
     padding: 1.5em;
     border: 0.15em solid black;
     border-radius: 0.5em 0.5em 0 0;
@@ -27,6 +27,7 @@
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 1em;
+    color: #3a3153;
 }
 
 .loginForm input[type="text"],
@@ -35,7 +36,7 @@
     width: 100%;
     padding: 0.8em;
     margin-bottom: 2em;
-    border: 0.1em solid #ccc;
+    border: 0.1em solid #b1aebb;
     border-radius: 0.5em;
     box-sizing: border-box;
 }
@@ -47,7 +48,7 @@
     border-radius: 0.5em;
     border: none;
     background-color: #007bff;
-    color: #fff;
+    color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -86,9 +87,9 @@
     text-decoration: none;
     font-weight: bold;
     transition: 0.5s;
-    color: #4b0082;
+    color: #3a3153;
 }
 
 .signupBox a:hover {
-    color: #8d0ec2;
+    color: #5f43b2;
 }

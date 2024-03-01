@@ -35,8 +35,8 @@
             <div class="signupForm">
                 <h2>Sign Up</h2>
                 <form action="../signup/registerUser.php" method="post">
-                    <label for="signupUsername">Username</label>
                     <!-- Assign class to .noMargin if an error isset() and set the value to the last attempt -->
+                    <label for="signupUsername">Username</label>
                     <input type="text" name="username" id="signupUsername" class="<?php echo $usernameClass; ?>"
                            value="<?php echo $_SESSION['usernameAttempt'] ?? '' ?>">
                     <?php
@@ -44,25 +44,25 @@
                         echo '<p class="error">*' . $_SESSION["nameErr"] . '</p>';
                     }
                     ?>
-                    <label for="signupEmail">Email</label>
                     <!-- Assign class to .noMargin if an error isset() and set the value to the last attempt -->
+                    <label for="signupEmail">Email</label>
                     <input type="email" name="email" id="signupEmail" class="<?php echo $emailClass; ?>"
                            value="<?php echo $_SESSION['emailAttempt'] ?? '' ?>">
                     <?php
                     if (isset($_SESSION["emailErr"])) {
                             echo '<p class="error">*' . $_SESSION["emailErr"] . '</p>';
-                        }
+                    }
                     ?>
-                    <label for="signupPassword">Password</label>
                     <!-- Assign class to .noMargin if an error isset() and set the value to the last attempt -->
+                    <label for="signupPassword">Password</label>
                     <input type="password" name="password" id="signupPassword" class="<?php echo $passClass; ?>">
                     <?php
                     if (isset($_SESSION["passErr"])) {
                         echo '<p class="error">*' . $_SESSION["passErr"] . '</p>';
                     }
                     ?>
-                    <input type="submit" value="Sign Up">
                     <!-- Error message that will be echoed if the database cannot be accessed-->
+                    <input type="submit" value="Sign Up">
                     <?php
                     if (isset($_SESSION["status"])) {
                     echo '<p class="error">*' . $_SESSION["status"] . '</p>';

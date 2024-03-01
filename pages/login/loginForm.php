@@ -1,6 +1,6 @@
 <?php
 include '../connection.php';
-/*If the user is already signed in proceed to climateControl.php*/
+/* If the user is already signed in proceed to climateControl.php */
 if (isset($_SESSION['username'])) {
     header("location: ../../pages/climateControl/climateControl.php");
     exit();
@@ -31,11 +31,11 @@ if (isset($_SESSION['username'])) {
             <div class="loginForm">
                 <h2>Login</h2>
                 <form action="../login/login.php" method="post">
-                    <label for="loginUsername">Username</label>
                     <!--
                     If $_SESSION['usernameAttempt'] is set value = $_SESSION['usernameAttempt']
                     else set value = ''
                     -->
+                    <label for="loginUsername">Username</label>
                     <input type="text" name="username" id="loginUsername"
                            value="<?php echo $_SESSION['usernameAttempt'] ?? '' ?>">
                     <label for="loginPassword">Password</label>

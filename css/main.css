@@ -25,12 +25,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 0.1em solid #ccc;
+    border-bottom: 0.1em solid #b1aebb;
     box-sizing: border-box;
 }
 
 .logo {
-    color: #4b0082;
+    color: #3a3153;
     font-size: 3em;
     padding-left: 0.5em;
 }
@@ -38,12 +38,12 @@ nav {
 .logo a,
 .logo a:visited {
     text-decoration: none;
-    color: #4b0082;
+    color: #3a3153;
     transition: 0.5s;
 }
 
 .logo a:hover {
-    color: #8d0ec2;
+    color: #5f43b2;
 }
 
 .menu {
@@ -69,9 +69,9 @@ nav {
     text-decoration: none;
     font-weight: bold;
     transition: 0.5s;
-    color: #4b0082;
+    color: #3a3153;
 }
 
 .menu ul li a:hover {
-    color: #8d0ec2;
+    color: #5f43b2;
 }
