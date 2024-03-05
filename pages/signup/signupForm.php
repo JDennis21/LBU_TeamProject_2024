@@ -11,7 +11,7 @@
 <div class="main">
     <nav>
         <div class="logo">
-            <a href="../homePage/homePage.php">logo</a>
+            <a href="../index.php">logo</a>
         </div>
         <div class="menu">
             <ul>
