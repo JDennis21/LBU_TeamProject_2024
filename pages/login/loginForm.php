@@ -40,17 +40,11 @@ if (isset($_SESSION['username'])) {
             <div class="loginForm">
                 <h2>Login</h2>
                 <form action="../login/login.php" method="post">
-                    <label for="loginUsername">Username</label>
+                    <label for="loginUsername">USERNAME</label>
                     <input type="text" name="username" id="loginUsername"
                            value="<?php echo $_SESSION['usernameAttempt'] ?? '' ?>">
-                    <label for="loginPassword">Password</label>
+                    <label for="loginPassword">PASSWORD</label>
                     <input type="password" name="password" id="loginPassword" class="<?php echo $inputClass; ?>">
-                    <?php
-                    if (isset($_SESSION["error"])) {
-                        echo '<p class="error">*' . $_SESSION["error"] . '</p>';
-                    }
-                    ?>
-                    <input type="password" name="password" id="loginPassword">
                     <?php
                     if (isset($_SESSION["error"])) {
                         echo '<p class="error">*' . $_SESSION["error"] . '</p>';

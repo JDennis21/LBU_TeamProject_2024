@@ -29,8 +29,8 @@
              * formatting
             */
             $usernameClass = isset($_SESSION["usernameErr"]) ? 'noMargin' : '';
-            $emailClass = isset($_SESSION["emailErr"]) ? 'noMargin' : '';
             $nameClass = isset($_SESSION["nameErr"]) ? 'noMargin' : '';
+            $emailClass = isset($_SESSION["emailErr"]) ? 'noMargin' : '';
             $passClass = isset($_SESSION["passErr"]) ? 'noMargin' : '';
             ?>
             <div class="signupForm">
@@ -45,6 +45,15 @@
                         echo '<p class="error">*' . $_SESSION["usernameErr"] . '</p>';
                     }
                     ?>
+                    <label for="signupName">FULLNAME</label>
+                    <!-- Assign class to .noMargin if an error isset() and set the value to the last attempt -->
+                    <input type="text" name="fullName" id="signupName" class="<?php echo $nameClass; ?>"
+                           value="<?php echo $_SESSION['nameAttempt'] ?? '' ?>">
+                    <?php
+                    if (isset($_SESSION["nameErr"])) {
+                        echo '<p class="error">*' . $_SESSION["nameErr"] . '</p>';
+                    }
+                    ?>
                     <label for="signupEmail">EMAIL</label>
                     <!-- Assign class to .noMargin if an error isset() and set the value to the last attempt -->
                     <input type="email" name="email" id="signupEmail" class="<?php echo $emailClass; ?>"
@@ -52,15 +61,6 @@
                     <?php
                     if (isset($_SESSION["emailErr"])) {
                             echo '<p class="error">*' . $_SESSION["emailErr"] . '</p>';
-                    }
-                    ?>
-                    <label for="signupName">Full name</label>
-                    <!-- Assign class to .noMargin if an error isset() and set the value to the last attempt -->
-                    <input type="text" name="fullName" id="signupName" class="<?php echo $nameClass; ?>"
-                           value="<?php echo $_SESSION['nameAttempt'] ?? '' ?>">
-                    <?php
-                    if (isset($_SESSION["nameErr"])) {
-                        echo '<p class="error">*' . $_SESSION["nameErr"] . '</p>';
                     }
                     ?>
                     <label for="signupPassword">PASSWORD</label>
