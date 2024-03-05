@@ -1,6 +1,6 @@
 /*login.css*/
 .content {
-    height: 92%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,9 +15,9 @@
 .loginForm {
     width: 100%;
     height: fit-content;
-    background-color: white;
+    background-color: #3a3153;
     padding: 1.5em;
-    border: 0.15em solid black;
+    border-bottom: 0.15em solid black;
     border-radius: 0.5em 0.5em 0 0;
     box-shadow: 0 0 1em 0 rgba(0,0,0,0.1);
     box-sizing: border-box;
@@ -27,7 +27,11 @@
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 1em;
-    color: #3a3153;
+    color: white;
+}
+
+.loginForm label {
+    font-weight: bold;
 }
 
 .loginForm input[type="text"],
@@ -36,7 +40,7 @@
     width: 100%;
     padding: 0.8em;
     margin-bottom: 2em;
-    border: 0.1em solid #b1aebb;
+    border: 0.1em solid #3a3153;
     border-radius: 0.5em;
     box-sizing: border-box;
 }
@@ -47,18 +51,18 @@
     margin-bottom: 0;
     border-radius: 0.5em;
     border: none;
-    background-color: #007bff;
+    background-color: #5f43b2;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .loginForm input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #5b42a8;
 }
 
 .loginForm label {
-    color: #707070;
+    color: white;
 }
 
 .loginForm input.noMargin {
@@ -74,19 +78,19 @@
     text-decoration: none;
     font-weight: bold;
     transition: 0.5s;
-    color: #3a3153;
+    color: white;
 }
 
 .forgotEmail a:hover {
-    color: #5f43b2;
+    color: #c4c4c4;
 }
 
 .signupBox {
     width: 100%;
     height: fit-content;
-    background-color: #f5f5f5;
+    background-color: #3a3153;
     padding: 1.5em;
-    border: 0.15em solid black;
+    border-top: 0.15em solid black;
     border-top: none;
     border-radius: 0 0 0.5em 0.5em;
     box-shadow: 0 0 1em 0 rgba(0,0,0,0.1);
@@ -100,6 +104,7 @@
 .signupBox p {
     padding: 0;
     margin: 0;
+    color: white;
 }
 
 .signupBox a,
@@ -107,9 +112,9 @@
     text-decoration: none;
     font-weight: bold;
     transition: 0.5s;
-    color: #3a3153;
+    color: white;
 }
 
 .signupBox a:hover {
-    color: #5f43b2;
+    color: #c4c4c4;
 }

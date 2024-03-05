@@ -8,17 +8,17 @@
     <title>Site Name</title>
 </head>
 <body>
+<nav>
+    <div class="logo">
+        <a href="../../home/index.php">logo</a>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="../login/loginForm.php">Login</a></li>
+        </ul>
+    </div>
+</nav>
 <div class="main">
-    <nav>
-        <div class="logo">
-            <a href="../../home/index.php">logo</a>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="../login/loginForm.php">Login</a></li>
-            </ul>
-        </div>
-    </nav>
     <div class="content">
         <div class="formContainer">
             <?php
@@ -85,10 +85,8 @@
             </div>
         </div>
     </div>
-    <footer>
-
-    </footer>
 </div>
+<?php include '../../components/footer.html'; ?>
 <?php
 $_SESSION = array();
 ?>

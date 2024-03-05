@@ -15,17 +15,17 @@ if (isset($_SESSION['username'])) {
     <title>Site Name</title>
 </head>
 <body>
+<nav>
+    <div class="logo">
+        <a href="../../home/index.php">logo</a>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="../signup/signupForm.php">Sign Up</a></li>
+        </ul>
+    </div>
+</nav>
 <div class="main">
-    <nav>
-        <div class="logo">
-            <a href="../../home/index.php">logo</a>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="../signup/signupForm.php">Sign Up</a></li>
-            </ul>
-        </div>
-    </nav>
     <div class="content">
         <div class="formContainer">
             <?php
@@ -62,6 +62,7 @@ if (isset($_SESSION['username'])) {
         </div>
     </div>
 </div>
+<?php include '../../components/footer.html'; ?>
 <?php
 //Empty $_SESSION["error"] so that the error message is gone after a page refresh
 unset($_SESSION["error"]);
