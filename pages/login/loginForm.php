@@ -38,7 +38,7 @@ if (isset($_SESSION['username'])) {
             $inputClass = isset($_SESSION["error"]) ? 'noMargin' : '';
             ?>
             <div class="loginForm">
-                <h2>Login</h2>
+                <h2>LOGIN</h2>
                 <form action="../login/login.php" method="post">
                     <label for="loginUsername">USERNAME</label>
                     <input type="text" name="username" id="loginUsername"
