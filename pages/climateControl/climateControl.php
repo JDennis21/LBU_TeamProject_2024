@@ -3,7 +3,7 @@ include '../../pages/connection.php';
 global $connection;
 
 if (!isset($_SESSION['username'])) {
-    header("location: ../pages/login/loginForm.php");
+    header("location: ../../pages/auth/login/loginForm.php");
 }
 ?>
 <!DOCTYPE html>
@@ -18,11 +18,11 @@ if (!isset($_SESSION['username'])) {
 <div class="main">
     <nav>
         <div class="logo">
-            <a href="../index.php">logo</a>
+            <a href="../../pages/home/index.php">logo</a>
         </div>
         <div class="menu">
             <ul>
-                <li><a href="../signOut.php">Sign Out</a></li>
+                <li><a href="../../pages/auth/signOut.php">Sign Out</a></li>
             </ul>
         </div>
     </nav>

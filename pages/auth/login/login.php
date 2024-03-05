@@ -1,5 +1,5 @@
 <?php
-include '../connection.php';
+include '../../connection.php';
 global $connection;
 
 //Set the attempted username and password
@@ -17,7 +17,7 @@ $result = mysqli_query($connection, $query);
 */
 if ($row = mysqli_fetch_assoc($result)) {
     $_SESSION['username'] = $username;
-    header("location: ../../pages/climateControl/climateControl.php");
+    header("Location: ../../climateControl/climateControl.php");
 } else {
     $_SESSION['error'] = 'Username or password is incorrect';
     header("location: {$_SERVER['HTTP_REFERER']}");

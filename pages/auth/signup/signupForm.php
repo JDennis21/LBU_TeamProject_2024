@@ -1,4 +1,4 @@
-<?php include_once "../../pages/connection.php"; ?>
+<?php include_once "../../connection.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +11,7 @@
 <div class="main">
     <nav>
         <div class="logo">
-            <a href="../index.php">logo</a>
+            <a href="../../home/index.php">logo</a>
         </div>
         <div class="menu">
             <ul>
@@ -35,7 +35,7 @@
             ?>
             <div class="signupForm">
                 <h2>SIGN UP</h2>
-                <form action="../signup/registerUser.php" method="post">
+                <form action="../../auth/signup/registerUser.php" method="post">
                     <label for="signupUsername">USERNAME</label>
                     <!-- Assign class to .noMargin if an error isset() and set the value to the last attempt -->
                     <input type="text" name="username" id="signupUsername" class="<?php echo $usernameClass; ?>"

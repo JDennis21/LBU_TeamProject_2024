@@ -1,8 +1,8 @@
 <?php
-include '../connection.php';
+include '../../connection.php';
 //If the user is already signed in proceed to climateControl.php
 if (isset($_SESSION['username'])) {
-    header("location: ../../pages/climateControl/climateControl.php");
+    header("Location: ../../climateControl/climateControl.php");
     exit();
 }
 ?>
@@ -18,7 +18,7 @@ if (isset($_SESSION['username'])) {
 <div class="main">
     <nav>
         <div class="logo">
-            <a href="../index.php">logo</a>
+            <a href="../../home/index.php">logo</a>
         </div>
         <div class="menu">
             <ul>
@@ -39,7 +39,7 @@ if (isset($_SESSION['username'])) {
             ?>
             <div class="loginForm">
                 <h2>LOGIN</h2>
-                <form action="../login/login.php" method="post">
+                <form action="../../auth/login/login.php" method="post">
                     <label for="loginUsername">USERNAME</label>
                     <input type="text" name="username" id="loginUsername"
                            value="<?php echo $_SESSION['usernameAttempt'] ?? '' ?>">

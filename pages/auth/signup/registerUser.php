@@ -1,5 +1,5 @@
 <?php
-include '../connection.php';
+include '../../connection.php';
 global $connection;
 
 /**
@@ -59,7 +59,6 @@ function checkNotEmpty(): bool
     }
     return $valid;
 }
-
 
 /**
  * Checks if all the user inputs meet the required conditions
@@ -133,10 +132,9 @@ if ($check1 && $check2) {
     if ($stmt->execute()) {
         $_SESSION["username"] = $username;
         $stmt->close();
-        header("location: ../../pages/climateControl/climateControl.php");
-    } else {
-        $_SESSION["status"] = "Could not complete registration";
+        header("Location: ../../climateControl/climateControl.php");
+        exit();
     }
-} else {
-    header("location: {$_SERVER['HTTP_REFERER']}");
+    $_SESSION["status"] = "Could not complete registration";
 }
+header("location: {$_SERVER['HTTP_REFERER']}");
