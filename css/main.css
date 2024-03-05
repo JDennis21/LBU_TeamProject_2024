@@ -1,7 +1,10 @@
 /*main.css*/
 html,
 body {
-    font: 1em Arial, Helvetica, sans-serif;
+    font-family: "Epilogue", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -74,4 +77,8 @@ nav {
 
 .menu ul li a:hover {
     color: #8d0ec2;
+}
+
+footer {
+
 }
