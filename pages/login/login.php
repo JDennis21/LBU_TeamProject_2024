@@ -2,11 +2,11 @@
 include '../connection.php';
 global $connection;
 
-/*Set the attempted username and password*/
+//Set the attempted username and password
 $username = $_SESSION["usernameAttempt"] = $_POST["username"];
 $userPass = $_POST["password"];
 
-/*Get all users from users table where the username and password match the user input*/
+//Get all users from users table where the username and password match the user input
 $query = "SELECT * FROM users WHERE username = '$username' and userPass = '" . md5($userPass) . "';";
 
 $result = mysqli_query($connection, $query);

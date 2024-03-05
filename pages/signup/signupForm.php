@@ -11,7 +11,7 @@
 <div class="main">
     <nav>
         <div class="logo">
-            <a href="../homePage/homePage.php">logo</a>
+            <a href="../index.php">logo</a>
         </div>
         <div class="menu">
             <ul>
@@ -34,9 +34,10 @@
             $passClass = isset($_SESSION["passErr"]) ? 'noMargin' : '';
             ?>
             <div class="signupForm">
-                <h2>Sign Up</h2>
+                <h2>SIGN UP</h2>
                 <form action="../signup/registerUser.php" method="post">
-                    <label for="signupUsername">Username</label>
+                    <label for="signupUsername">USERNAME</label>
+                    <!-- Assign class to .noMargin if an error isset() and set the value to the last attempt -->
                     <input type="text" name="username" id="signupUsername" class="<?php echo $usernameClass; ?>"
                            value="<?php echo $_SESSION['usernameAttempt'] ?? '' ?>">
                     <?php
@@ -44,7 +45,8 @@
                         echo '<p class="error">*' . $_SESSION["usernameErr"] . '</p>';
                     }
                     ?>
-                    <label for="signupEmail">Email</label>
+                    <label for="signupEmail">EMAIL</label>
+                    <!-- Assign class to .noMargin if an error isset() and set the value to the last attempt -->
                     <input type="email" name="email" id="signupEmail" class="<?php echo $emailClass; ?>"
                            value="<?php echo $_SESSION['emailAttempt'] ?? '' ?>">
                     <?php
@@ -53,6 +55,7 @@
                     }
                     ?>
                     <label for="signupName">Full name</label>
+                    <!-- Assign class to .noMargin if an error isset() and set the value to the last attempt -->
                     <input type="text" name="fullName" id="signupName" class="<?php echo $nameClass; ?>"
                            value="<?php echo $_SESSION['nameAttempt'] ?? '' ?>">
                     <?php
@@ -60,16 +63,17 @@
                         echo '<p class="error">*' . $_SESSION["nameErr"] . '</p>';
                     }
                     ?>
-                    <label for="signupPassword">Password</label>
+                    <label for="signupPassword">PASSWORD</label>
+                    <!-- Assign class to .noMargin if an error isset() and set the value to the last attempt -->
                     <input type="password" name="password" id="signupPassword" class="<?php echo $passClass; ?>">
                     <?php
                     if (isset($_SESSION["passErr"])) {
                         echo '<p class="error">*' . $_SESSION["passErr"] . '</p>';
                     }
                     ?>
-                    <!-- Error message that will be echoed if the database cannot be accessed-->
-                    <input type="submit" value="Sign Up">
+                    <input type="submit" value="SIGN UP">
                     <?php
+                    //Error message that will be echoed if the database cannot be accessed
                     if (isset($_SESSION["status"])) {
                     echo '<p class="error">*' . $_SESSION["status"] . '</p>';
                     }
@@ -81,6 +85,9 @@
             </div>
         </div>
     </div>
+    <footer>
+
+    </footer>
 </div>
 <?php
 $_SESSION = array();

@@ -17,7 +17,7 @@ function cleanString(string $inputString): string
     return htmlspecialchars(stripcslashes(trim($inputString)));
 }
 
-/* Clean the user input before processing and assign it to a session so that it can be used for form memory */
+// Clean the user input before processing and assign it to a session so that it can be used for form memory
 $_SESSION["usernameAttempt"] = cleanString($_POST["username"]);
 $_SESSION["emailAttempt"] = cleanString($_POST["email"]);
 $_SESSION["nameAttempt"] = cleanString($_POST["fullName"]);
@@ -79,12 +79,12 @@ function checkConditions(): bool
     $fullName = $_SESSION["nameAttempt"];
     $password = $_SESSION["passwordAttempt"];
 
-    /* Ensures length between 6 and 20 characters */
+    // Ensures length between 6 and 20 characters
     if (6 > strlen($username) || strlen($username) > 20) {
         $_SESSION["usernameErr"] = "Username must be between 6 and 20 characters";
         $valid = false;
     }
-    /* Ensures that the username only contains letters and numbers */
+    // Ensures that the username only contains letters and numbers
     if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
         $_SESSION["usernameErr"] = "No special characters allowed";
         $valid = false;
@@ -94,12 +94,12 @@ function checkConditions(): bool
         $_SESSION["nameErr"] = "Name must be less than 50 characters";
         $valid = false;
     }
-    /* Validate the input is a valid email address */
+    // Validate the input is a valid email address
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $_SESSION["emailErr"] = "Email is not valid";
         $valid = false;
     }
-    /* Ensures the password is of the correct length, contains 1 lowercase, uppercase and number */
+    // Ensures the password is of the correct length, contains 1 lowercase, uppercase and number
     if (!preg_match("/^.*(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*.{8,}$/", $password)) {
         $_SESSION["passErr"] = "Password must be greater than 8 characters and have at least 1 uppercase, lowercase
          and number ";
@@ -114,7 +114,7 @@ function checkConditions(): bool
  */
 $check1 = checkConditions();
 $check2 = checkNotEmpty();
-/* Checks if inputs passed both checks, if true proceed to insert data into database, else return to loginForm.php */
+//Checks if inputs passed both checks, if true proceed to insert data into database, else return to loginForm.php
 if ($check1 && $check2) {
     $username = $_SESSION["usernameAttempt"];
     $email = $_SESSION["emailAttempt"];
@@ -129,7 +129,7 @@ if ($check1 && $check2) {
     $stmt = $connection->prepare($query);
     $stmt->bind_param("ssss", $username, $email, $fullName, $password);
 
-    /* If data is successfully inserted into database send the user to climateControl.php. Else set error message */
+    // If data is successfully inserted into database send the user to climateControl.php. Else set error message
     if ($stmt->execute()) {
         $_SESSION["username"] = $username;
         $stmt->close();

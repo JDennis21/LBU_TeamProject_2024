@@ -1,6 +1,6 @@
 <?php
 include '../connection.php';
-/* If the user is already signed in proceed to climateControl.php */
+//If the user is already signed in proceed to climateControl.php
 if (isset($_SESSION['username'])) {
     header("location: ../../pages/climateControl/climateControl.php");
     exit();
@@ -18,7 +18,7 @@ if (isset($_SESSION['username'])) {
 <div class="main">
     <nav>
         <div class="logo">
-            <a href="../homePage/homePage.php">logo</a>
+            <a href="../index.php">logo</a>
         </div>
         <div class="menu">
             <ul>
@@ -50,6 +50,12 @@ if (isset($_SESSION['username'])) {
                         echo '<p class="error">*' . $_SESSION["error"] . '</p>';
                     }
                     ?>
+                    <input type="password" name="password" id="loginPassword">
+                    <?php
+                    if (isset($_SESSION["error"])) {
+                        echo '<p class="error">*' . $_SESSION["error"] . '</p>';
+                    }
+                    ?>
                     <input type="submit" value="Login">
                     <div class="forgotEmail">
                         <a href="#">Forgot email?</a>
@@ -63,7 +69,7 @@ if (isset($_SESSION['username'])) {
     </div>
 </div>
 <?php
-/* Empty $_SESSION["error"] so that the error message is gone after a page refresh */
+//Empty $_SESSION["error"] so that the error message is gone after a page refresh
 unset($_SESSION["error"]);
 ?>
 </body>
