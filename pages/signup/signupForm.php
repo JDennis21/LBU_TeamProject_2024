@@ -62,8 +62,8 @@
                     }
                     ?>
                     <input type="submit" value="Sign Up">
-                    <!-- Error message that will be echoed if the database cannot be accessed-->
                     <?php
+                    //Error message that will be echoed if the database cannot be accessed
                     if (isset($_SESSION["status"])) {
                     echo '<p class="error">*' . $_SESSION["status"] . '</p>';
                     }

@@ -11,12 +11,12 @@
 <div class="main">
     <nav>
         <div class="logo">
-            <a href="index.php">logo</a>
+            <a href="/pages/index.php">logo</a>
         </div>
         <div class="menu">
             <ul>
                 <?php
-                /* If the user is logged in display "Your Account" link, else normal nav*/
+                // If the user is logged in display "Your Account" link, else normal nav
                 if (isset($_SESSION["username"])) {
                     echo '<li><a href="climateControl/climateControl.php">Your Account</a></li>';
                 } else {

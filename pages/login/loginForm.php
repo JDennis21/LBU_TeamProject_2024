@@ -1,6 +1,6 @@
 <?php
 include '../connection.php';
-/*If the user is already signed in proceed to climateControl.php*/
+//If the user is already signed in proceed to climateControl.php
 if (isset($_SESSION['username'])) {
     header("location: ../../pages/climateControl/climateControl.php");
     exit();
@@ -32,20 +32,15 @@ if (isset($_SESSION['username'])) {
                 <h2>Login</h2>
                 <form action="../login/login.php" method="post">
                     <label for="loginUsername">Username</label>
-                    <!--
-                    If $_SESSION['usernameAttempt'] is set value = $_SESSION['usernameAttempt']
-                    else set value = ''
-                    -->
                     <input type="text" name="username" id="loginUsername"
                            value="<?php echo $_SESSION['usernameAttempt'] ?? '' ?>">
                     <label for="loginPassword">Password</label>
                     <input type="password" name="password" id="loginPassword">
-                    <!--
-                    If $_SESSION["error"] is set echo the error message with an asterisk appended at the start
-                    -->
-                    <p class="error"><?php if (isset($_SESSION["error"])) {
-                            echo "*" . $_SESSION["error"];
-                        } ?></p>
+                    <?php
+                    if (isset($_SESSION["error"])) {
+                        echo '<p class="error">*' . $_SESSION["error"] . '</p>';
+                    }
+                    ?>
                     <input type="submit" value="Login">
                 </form>
             </div>
@@ -55,8 +50,8 @@ if (isset($_SESSION['username'])) {
         </div>
     </div>
 </div>
-<!-- Empty $_SESSION["error"] so that the error message is gone after a page refresh -->
 <?php
+//Empty $_SESSION["error"] so that the error message is gone after a page refresh
 unset($_SESSION["error"]);
 ?>
 </body>
