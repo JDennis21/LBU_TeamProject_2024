@@ -1,77 +1,121 @@
 /*main.css*/
 html,
 body {
-    font: 1em Arial, Helvetica, sans-serif;
+    font-family: "Epilogue", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
 .error {
-    color: darkred;
+    color: #d02222;
     font-weight: bold;
-    margin: 0 0 1em 0;
+    margin: 0 0 1.5vh 0;
     height: fit-content;
 }
 
 .main {
     width: 100%;
-    height: 100%;
+    height: 70%;
 }
 
+/*nav*/
 nav {
     width: 100%;
-    height: 8%;
+    height: 10%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border-bottom: 0.1em solid #ccc;
+    align-items: flex-end;
     box-sizing: border-box;
+    font-weight: bold;
+    font-size: 2em;
 }
 
 .logo {
-    color: #4b0082;
-    font-size: 3em;
-    padding-left: 0.5em;
+    margin-left: 4vw;
+    align-self: flex-end;
 }
 
 .logo a,
 .logo a:visited {
     text-decoration: none;
-    color: #4b0082;
+    color: #3a3153;
     transition: 0.5s;
 }
 
 .logo a:hover {
-    color: #8d0ec2;
+    color: #5f43b2;
 }
 
 .menu {
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .menu ul {
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    margin: 0;
+    padding: 0;
 }
 
 .menu ul li {
     list-style: none;
-    margin-right: 1em;
-    font-size: 1em;
+    margin-right: 2vw;
+    align-self: flex-end;
 }
 
 .menu ul li a,
 .menu ul li a:visited {
     text-decoration: none;
-    font-weight: bold;
     transition: 0.5s;
-    color: #4b0082;
+    color: black;
 }
 
 .menu ul li a:hover {
-    color: #8d0ec2;
+    color: #c4c4c4;
+}
+
+/*footer*/
+footer {
+    position: fixed;
+    height: 20%;
+    width: 100%;
+    background-color: #3a3153;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.footer-left {
+    margin-left: 8vw;
+    text-align: center;
+}
+
+.footer-left h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+}
+
+.footer-left p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+}
+
+.footer-right {
+margin-right: 7vw;
+}
+
+.footer-right h1 {
+    font-size: 5em;
 }
