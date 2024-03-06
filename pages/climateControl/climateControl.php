@@ -16,22 +16,11 @@ if (!isset($_SESSION['username'])) {
 </head>
 <body>
 <div class="main">
-    <nav>
-        <div class="logo">
-            <a href="../../pages/home/index.php">logo</a>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="../../pages/auth/signOut.php">Sign Out</a></li>
-            </ul>
-        </div>
-    </nav>
+    <?php include '../components/nav.php'; ?>
     <div class="content">
 
     </div>
-    <div class="footer">
-
-    </div>
+    <?php include '../components/footer.html'; ?>
 </div>
 </body>
 </html>

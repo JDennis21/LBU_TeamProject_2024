@@ -1,38 +1,26 @@
-<?php include_once "../connection.php"; ?>
+<?php
+include '../../pages/connection.php';
+global $connection;
+
+if (!isset($_SESSION['username'])) {
+    header("location: ../../pages/auth/login/loginForm.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <link href="/css/main.css" rel="stylesheet" type="text/css" />
-    <link href="/css/index.css" rel="stylesheet" type="text/css" />
+    <link href="/css/climateControl.css" rel="stylesheet" type="text/css" />
     <title>Site Name</title>
 </head>
 <body>
 <div class="main">
-    <nav>
-        <div class="logo">
-            <a href="../home/index.php">logo</a>
-        </div>
-        <div class="menu">
-            <ul>
-                <?php
-                // If the user is logged in display "Your Account" link, else normal nav
-                if (isset($_SESSION["username"])) {
-                    echo '<li><a href="../climateControl/climateControl.php">Your Account</a></li>';
-                } else {
-                    echo '<li><a href="../auth/signup/signupForm.php">Sign Up</a></li>';
-                    echo '<li><a href="../auth/login/loginForm.php">Login</a></li>';
-                }
-                ?>
-            </ul>
-        </div>
-    </nav>
+    <?php include '../components/nav.php'; ?>
     <div class="content">
 
     </div>
-    <div class="footer">
-
-    </div>
+    <?php include '../components/footer.html'; ?>
 </div>
 </body>
 </html>

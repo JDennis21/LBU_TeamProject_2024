@@ -15,16 +15,7 @@ if (isset($_SESSION['username'])) {
     <title>Site Name</title>
 </head>
 <body>
-<nav>
-    <div class="logo">
-        <a href="../../home/index.php">logo</a>
-    </div>
-    <div class="menu">
-        <ul>
-            <li><a href="../signup/signupForm.php">Sign Up</a></li>
-        </ul>
-    </div>
-</nav>
+<?php include '../../components/nav.php'; ?>
 <div class="main">
     <div class="content">
         <div class="formContainer">
@@ -50,20 +41,23 @@ if (isset($_SESSION['username'])) {
                         echo '<p class="error">*' . $_SESSION["error"] . '</p>';
                     }
                     ?>
-                    <input type="submit" value="Login">
-                    <div class="forgotEmail">
-                        <a href="#">Forgot email?</a>
+                    <div style="text-align: center">
+                        <input type="submit" value="LOGIN">
+                        <div class="forgotEmail">
+                            <a href="#">Forgot email?</a>
+                        </div>
                     </div>
                 </form>
             </div>
             <div class="signupBox">
-                <p>Don't have an account with us? <a href="../signup/signupForm.php">Sign up</a></p>
+                <p>Don't have an account with us?</p>
+                <a href="../signup/signupForm.php">SIGN UP</a>
             </div>
         </div>
     </div>
 </div>
-<?php include '../../components/footer.html'; ?>
 <?php
+include '../../components/footer.html';
 //Empty $_SESSION["error"] so that the error message is gone after a page refresh
 unset($_SESSION["error"]);
 ?>
