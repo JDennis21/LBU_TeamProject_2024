@@ -62,15 +62,19 @@
                         echo '<p class="error">*' . $_SESSION["passErr"] . '</p>';
                     }
                     ?>
-                    <input type="submit" value="SIGN UP">
-                    <?php
-                    //Error message that will be echoed if the database cannot be accessed
-                    if (isset($_SESSION["status"])) {
-                    echo '<p class="error">*' . $_SESSION["status"] . '</p>';
-                    }
-                    ?>
+                    <div>
+                        <input type="submit" value="SIGN UP">
+                        <?php
+                        //Error message that will be echoed if the database cannot be accessed
+                        if (isset($_SESSION["status"])) {
+                        echo '<p class="error">*' . $_SESSION["status"] . '</p>';
+                        }
+                        ?>
+                    </div>
                 </form>
             </div>
+        </div>
+        <div class="sideBar">
             <div class="loginBox">
                 <p>Already have an account with us?</p>
                 <a href="../login/loginForm.php">LOGIN</a>
