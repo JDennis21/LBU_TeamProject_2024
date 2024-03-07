@@ -4,34 +4,40 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 1vw 0 1vw;
+    margin: 0 1% 0 1%;
 }
 
 .formContainer {
-    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 98%;
     width: 25%;
     font-weight: bold;
     color: white;
+    box-sizing: border-box;
 }
 
 .loginForm {
     width: 100%;
-    height: fit-content;
     background-color: #3a3153;
-    padding: 1.5vw;
-    margin-bottom: 0.5vh;
+    padding: 5%;
+    margin-bottom: 1%;
     border-radius: 1em;
     box-shadow: 0 0 1em 0 rgba(0,0,0,0.1);
     box-sizing: border-box;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .loginForm h2 {
     text-align: center;
     font-size: 2.5em;
-    margin-bottom: 1em;
+    margin: 7% 0;
 }
 
-.loginForm input {
+.loginForm input{
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -40,25 +46,23 @@
     font-weight: bold;
     font-style: normal;
     font-size: 1em;
+    border: none;
+    border-radius: 1em;
+    box-sizing: border-box;
 }
 
 .loginForm input[type="text"],
 .loginForm input[type="email"],
 .loginForm input[type="password"] {
     width: 100%;
-    padding: 0.625vw;
-    margin-bottom: 3.5vh;
-    border: none;
-    border-radius: 1em;
-    box-sizing: border-box;
+    padding: 3%;
+    margin-bottom: 6%;
 }
 
 .loginForm input[type="submit"] {
     width: 35%;
-    padding: 0.7vw 0;
+    padding: 3% 0;
     margin-bottom: 0;
-    border-radius: 1em;
-    border: none;
     background-color: #5f43b2;
     color: white;
     cursor: pointer;
@@ -73,42 +77,43 @@
     margin-bottom: 0;
 }
 
-.forgotEmail {
-    margin-top: 1vh;
+.forgotPass {
+    margin-top: 3%;
 }
 
-.forgotEmail a,
-.forgotEmail a:visited {
+.forgotPass a,
+.forgotPass a:visited {
     text-decoration: none;
     transition: 0.5s;
     color: white;
 }
 
-.forgotEmail a:hover {
+.forgotPass a:hover {
     color: #c4c4c4;
 }
 
 .signupBox {
     width: 100%;
-    height: fit-content;
     background-color: #3a3153;
-    padding: 1.5vw;
+    padding: 5%;
     border-radius: 1em;
     box-shadow: 0 0 1em 0 rgba(0,0,0,0.1);
     box-sizing: border-box;
     text-align: center;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .signupBox p {
     padding: 0;
-    margin: 0 0 1.4vh 0;
+    margin: 0 0 3% 0;
 }
 
 .signupBox a,
 .signupBox a:visited {
     display: inline-block;
     width: 35%;
-    padding: 0.7vw 0;
+    padding: 3% 0;
     border-radius: 1em;
     border: none;
     background-color: #5f43b2;

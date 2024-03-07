@@ -1,10 +1,6 @@
 <?php
 include '../../pages/connection.php';
 global $connection;
-
-if (!isset($_SESSION['username'])) {
-    header("location: ../../pages/auth/login/loginForm.php");
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,12 +11,12 @@ if (!isset($_SESSION['username'])) {
     <title>Site Name</title>
 </head>
 <body>
+<?php include '../components/nav.php'; ?>
 <div class="main">
-    <?php include '../components/nav.php'; ?>
     <div class="content">
 
     </div>
-    <?php include '../components/footer.html'; ?>
 </div>
+<?php include '../components/footer.html'; ?>
 </body>
 </html>
