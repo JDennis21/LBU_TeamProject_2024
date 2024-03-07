@@ -43,8 +43,8 @@ if (isset($_SESSION['username'])) {
                     ?>
                     <div style="text-align: center">
                         <input type="submit" value="LOGIN">
-                        <div class="forgotEmail">
-                            <a href="#">Forgot email?</a>
+                        <div class="forgotPass">
+                            <a href="#">Forgot password?</a>
                         </div>
                     </div>
                 </form>

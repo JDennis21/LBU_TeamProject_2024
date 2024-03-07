@@ -77,18 +77,18 @@
     margin-bottom: 0;
 }
 
-.forgotEmail {
+.forgotPass {
     margin-top: 3%;
 }
 
-.forgotEmail a,
-.forgotEmail a:visited {
+.forgotPass a,
+.forgotPass a:visited {
     text-decoration: none;
     transition: 0.5s;
     color: white;
 }
 
-.forgotEmail a:hover {
+.forgotPass a:hover {
     color: #c4c4c4;
 }
 

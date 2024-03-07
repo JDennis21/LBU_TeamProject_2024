@@ -1,8 +1,8 @@
 <nav>
-    <div class="logo">
+    <div class="left">
         <a href="/LBU_TeamProject_2024/pages/home/index.php">LOGO</a>
     </div>
-    <div class="menu">
+    <div class="right">
         <ul>
             <?php
             if (basename($_SERVER['PHP_SELF']) === "climateControl.php") {
@@ -31,3 +31,4 @@
         </ul>
     </div>
 </nav>
+<div class="circleBackground"></div>
