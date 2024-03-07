@@ -4,9 +4,9 @@
     </div>
     <div class="middle">
         <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">TOOLS</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="/LBU_TeamProject_2024/pages/home/index.php">HOME</a></li>
+            <li><a href="/LBU_TeamProject_2024/pages/climateControl/climateControl.php">TOOLS</a></li>
+            <li><a href="/LBU_TeamProject_2024/pages/contact/contact.php">CONTACT</a></li>
         </ul>
     </div>
     <div class="right">
