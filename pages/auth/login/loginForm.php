@@ -54,6 +54,10 @@ if (isset($_SESSION['username'])) {
                 <a href="../signup/signupForm.php">SIGN UP</a>
             </div>
         </div>
+        <div class="banner">
+            <div class="banner-text">READY FOR A QUOTE?</div>
+            <a href="/LBU_TeamProject_2024/pages/contact/contact.php" class="banner-button">CONTACT</a>
+        </div>
     </div>
 </div>
 <?php
