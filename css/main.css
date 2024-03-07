@@ -100,13 +100,13 @@ nav ul li a:hover{
 .right ul li:last-child a{
     padding: 3% 6%;
     border-radius: 1em;
-    background-color: #5f43b2;
+    background-color: #3a3153;
     transition: background-color 0.3s ease;
 }
 
 .right ul li:last-child a:hover{
     color: white;
-    background-color: #5b42a8;
+    background-color: #3a3153;
 }
 
 /*footer*/
@@ -145,4 +145,43 @@ margin-right: 7vw;
 
 .footer-right h1 {
     font-size: 5em;
+}
+
+.banner-container {
+    position: relative;
+}
+
+.banner {
+    position: absolute;
+    bottom: 150px;
+    left: 500px;
+    width: 600px;
+    height: 80px;
+    background-color: #b1aebb;
+    box-shadow: 15px 15px 20px rgba(2, 0, 0, 0.5); /* Shadow effect */
+    padding: 20px; /* Adjust padding as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9; /* Ensure the banner is above other content */
+}
+
+.banner-text {
+    font-size: 28px; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+    font-family: "Epilogue", sans-serif;
+    color: white;
+}
+
+.banner-button {
+    background-color: #3a3153; /* Adjust button color as needed */
+    color: #fff; /* Adjust button text color as needed */
+    padding: 20px 30px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 10px; /* Adjust border radius as needed */
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold; /* Adjust font weight as needed */
+    font-family: "Epilogue", sans-serif;
+    font-size: 22px;
 }
