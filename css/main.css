@@ -110,6 +110,10 @@ nav ul li a:hover{
 }
 
 /*footer*/
+.footer-wrap {
+    height: 20%;
+}
+
 footer {
     position: fixed;
     height: 20%;
@@ -153,13 +157,13 @@ margin-right: 7vw;
 
 .banner {
     position: absolute;
-    bottom: 150px;
-    left: 500px;
-    width: 600px;
-    height: 80px;
+    bottom: 1.5%;
+    left: 30%;
+    width: 35%;
+    height: 11%;
     background-color: #b1aebb;
     box-shadow: 15px 15px 20px rgba(2, 0, 0, 0.5); /* Shadow effect */
-    padding: 20px; /* Adjust padding as needed */
+    padding: 1.4%; /* Adjust padding as needed */
     display: flex;
     justify-content: space-between;
     align-items: center;

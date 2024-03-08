@@ -14,10 +14,7 @@ global $connection;
 <?php include '../components/nav.php'; ?>
 <div class="main">
     <div class="content">
-        <div class="banner">
-            <div class="banner-text">READY FOR A QUOTE?</div>
-            <a href="/LBU_TeamProject_2024/pages/contact/contact.php" class="banner-button">CONTACT</a>
-        </div>
+
     </div>
 </div>
 <?php include '../components/footer.html'; ?>
