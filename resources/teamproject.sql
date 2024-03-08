@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 01, 2024 at 01:36 PM
+-- Generation Time: Mar 08, 2024 at 11:40 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -33,6 +33,27 @@ CREATE TABLE `contact` (
   `email` varchar(254) NOT NULL,
   `message` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `templog`
+--
+
+CREATE TABLE `templog` (
+  `datetime` datetime NOT NULL,
+  `temperature` float(5,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `templog`
+--
+
+INSERT INTO `templog` (`datetime`, `temperature`) VALUES
+('2024-03-08 11:39:40', 22.00),
+('2024-03-08 11:39:40', 22.00),
+('2024-03-08 11:39:59', 24.00),
+('2024-03-08 11:39:59', 24.00);
 
 -- --------------------------------------------------------
 
