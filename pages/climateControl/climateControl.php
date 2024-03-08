@@ -17,7 +17,9 @@ if (!isset($_SESSION['username'])) {
 <body>
 <?php include '../components/nav.php'; ?>
 <div class="main">
+    <div class="content">
 
+    </div>
 </div>
 <?php include '../components/footer.html'; ?>
 </body>
