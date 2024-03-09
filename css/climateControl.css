@@ -1,8 +1,91 @@
 /*climateControl.css*/
 .content {
-    height: 100%;
     display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
     justify-content: center;
+    height: 100%;
+    margin: 0 1%;
+}
+
+.top {
+    display: flex;
+}
+
+.temperature, .humidity, .speed {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-start; /* Center content vertically */
+    width: 250px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    margin-right: 100px; /* Adjust spacing between banners */
+    background-color: #3a3153; /* Set the background color */
+    margin-bottom: 10%; /* Adjust spacing between banners */
+    border-radius: 2em;
+}
+
+.temperature, .humidity, .speed {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 0 1% 0 1%;
+}
+
+.temperature .title, .humidity .title, .speed .title {
+    margin-bottom: 20%;
+}
+
+.temperature p, .humidity p, .speed p {
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0;
+}
+
+.value p {
+    font-size: 60px;
+}
+
+.speed input[type=range] {
+    -webkit-appearance: none;
+    height: 10%;
+    width: 100%;
+    background: white;
+    border-radius: 2em;
+}
+
+.speed input[type=range]::-moz-range-thumb,
+.speed input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 5%;
+    height: 5%;
+    background: #3a3153;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.speed-value {
+    text-align: center;
+    color: white;
+    margin-top: 10%;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#resetButton {
+    background-color: #b1aebb;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    width: 100%;
+}
+
+.speed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
