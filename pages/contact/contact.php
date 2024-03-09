@@ -25,19 +25,21 @@ global $connection;
         ?>
         <div class="contactForm">
             <form action="../../auth/login/contact.php" method="post">
-                <h2 style="font-weight: bolder;">GET IN TOUCH</h2>
-                <div class="inputRow">
-                    <input placeholder="NAME" type="text" name="name" id="contactName" value="<?php echo $_SESSION['nameAttempt'] ?? '' ?>">
-                    <input placeholder="EMAIL" type="email" name="email" id="contactEmail" value="<?php echo $_SESSION['emailAttempt'] ?? '' ?>">
-                </div>
-                <textarea placeholder="MESSAGE" name="message" id="contactMessage" class="<?php echo $inputClass; ?>"><?php echo $_SESSION['messageAttempt'] ?? '' ?></textarea>
-                <?php
-                if (isset($_SESSION["error"])) {
-                    echo '<p class="error">*' . $_SESSION["error"] . '</p>';
-                }
-                ?>
-                <div>
-                    <input type="submit" value="SUBMIT">
+                <div class="formContent">
+                    <h2 style="font-weight: bolder;">GET IN TOUCH</h2>
+                    <div class="inputRow">
+                        <input placeholder="NAME" type="text" name="name" id="contactName" value="<?php echo $_SESSION['nameAttempt'] ?? '' ?>">
+                        <input placeholder="EMAIL" type="email" name="email" id="contactEmail" value="<?php echo $_SESSION['emailAttempt'] ?? '' ?>">
+                    </div>
+                    <textarea placeholder="MESSAGE" name="message" id="contactMessage" class="<?php echo $inputClass; ?>">?php echo $_SESSION['messageAttempt'] ?? '' ?></textarea>
+                    <?php
+                    if (isset($_SESSION["error"])) {
+                        echo '<p class="error">*' . $_SESSION["error"] . '</p>';
+                    }
+                    ?>
+                    <div>
+                        <input type="submit" value="SUBMIT">
+                    </div>
                 </div>
             </form>
         </div>
@@ -49,10 +51,6 @@ global $connection;
             <h3>Website</h3>
         </div>
     </div>
-</div>
-<div class="banner">
-    <div class="banner-text">READY FOR A QUOTE?</div>
-    <a href="/LBU_TeamProject_2024/pages/contact/contact.php" class="banner-button">CONTACT</a>
 </div>
 <?php include '../components/footer.html'; ?>
 </body>

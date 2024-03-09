@@ -1,4 +1,8 @@
 /*main.css*/
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
     font-family: "Epilogue", sans-serif;
@@ -159,8 +163,8 @@ margin-right: 7vw;
     position: absolute;
     bottom: 1.5%;
     left: 30%;
-    width: 35%;
-    height: 11%;
+    width: 40%;
+    height: 16.5%;
     background-color: #b1aebb;
     box-shadow: 15px 15px 20px rgba(2, 0, 0, 0.5);
     padding: 1.4%;
@@ -171,18 +175,19 @@ margin-right: 7vw;
 }
 
 .banner-text {
-    font-size: 28px;
+    font-size: 2em;
     font-weight: bold;
-    font-family: "Epilogue", sans-serif;
     color: white;
+    margin-left: 3%;
 }
 
 .banner-button {
     background-color: #3a3153;
     color: #fff;
-    padding: 20px 30px;
+    padding: 3% 3.5%;
+    margin-right: 3%;
     border: none;
-    border-radius: 10px;
+    border-radius: 1em;
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
