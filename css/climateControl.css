@@ -1,33 +1,46 @@
 /*climateControl.css*/
 .content {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     height: 100%;
     margin: 0 1%;
 }
 
-.top {
+.top, .bottom {
     display: flex;
+    width: 100%;
+    height: 50%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.top {
+    align-content: flex-end;
 }
 
 .temperature, .humidity, .speed {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     width: 250px;
     height: 200px;
-    margin-right: 100px;
     background-color: #3a3153;
-    margin-bottom: 10%;
     border-radius: 2em;
 }
 
-.temperature, .humidity, .speed {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.temperature {
+    margin: 0 1% 1% 0;
+}
+
+.humidity {
+    margin: 0 0 1% 1%;
+}
+
+.speed {
+    margin-top: 1%;
 }
 
 .temperature .title, .humidity .title, .speed .title {
@@ -83,10 +96,3 @@
     font-size: 15px;
     width: 100%;
 }
-
-.speed {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
