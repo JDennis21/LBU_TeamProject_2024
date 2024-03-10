@@ -30,10 +30,10 @@ if (isset($_SESSION['username'])) {
             ?>
             <div class="loginForm">
                 <h2>RECOVER</h2>
-                <form action="../../auth/login/login.php" method="post">
-                    <label for="loginUsername">EMAIL OR USERNAME</label>
-                    <input type="text" name="username" id="loginUsername"
-                           value="<?php echo $_SESSION['usernameAttempt'] ?? '' ?>">
+                <form action="../../auth/login/forgot.php" method="post">
+                    <label for="forgotUsername">EMAIL OR USERNAME</label>
+                    <input type="text" name="username" id="forgotUsername"
+                           value="">
                     <?php
                     if (isset($_SESSION["error"])) {
                         echo '<p class="error">*' . $_SESSION["error"] . '</p>';
