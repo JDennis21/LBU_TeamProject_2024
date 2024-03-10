@@ -130,18 +130,17 @@ footer {
 
 .footer-left {
     text-align: center;
+    font-size: 1.5em;
 }
 
 .footer-left h3 {
     margin: 0;
     padding: 0;
-    font-size: 2em;
 }
 
 .footer-left p {
     margin: 0;
     padding: 0;
-    font-size: 1.5em;
 }
 
 .footer-middle {
