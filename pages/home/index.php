@@ -18,7 +18,7 @@ global $connection;
     </div>
     <div class="rightBannerContainer">
         <div class="rightBanner">
-            <img src="images/img.png" alt="Banner Image">
+            <img src="img.png" alt="Banner Image">
         </div>
     </div>
 </div>
