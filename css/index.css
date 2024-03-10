@@ -1,0 +1,8 @@
+/*index.css*/
+.content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1% 0 1%
+}
