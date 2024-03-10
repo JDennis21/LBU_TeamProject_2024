@@ -39,7 +39,6 @@ body {
 }
 
 /*nav*/
-/*TODO Text on the last button wraps if text is too large, such as when "sign out" or "your account" is displayed*/
 nav {
     height: 10%;
     display: flex;
@@ -54,31 +53,13 @@ nav *{
     padding: 0;
 }
 
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 1vw;
-}
-
-nav ul li a,
-nav ul li a:visited{
-    text-decoration: none;
-    transition: 0.5s;
-    color: white;
-}
-
-nav ul li a:hover,
-nav ul li a:hover{
-    color: #7c6f9d;
-}
-
 .nav-left {
-    margin-left: 4vw;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
     font-size: 1.5em;
-    align-self: flex-end;
+    margin-left: 5%;
+    align-content: flex-end;
 }
 
 .nav-left a,
@@ -92,15 +73,40 @@ nav ul li a:hover{
     color: #5f43b2;
 }
 
-.nav-middle ul li:last-child {
-    margin: 0;
+.nav-right {
+    display: flex;
+    width: 40%;
+    justify-content: flex-end;
+}
+
+.nav-right ul {
+    list-style: none;
+}
+
+.nav-right ul li {
+    display: inline-block;
+    margin-right: 1vw;
+}
+
+.nav-right ul li a,
+.nav-right ul li a:visited{
+    text-decoration: none;
+    transition: 0.5s;
+    color: white;
+    white-space: nowrap;
+}
+
+.nav-right ul li a:hover{
+    color: #7c6f9d;
 }
 
 .nav-right ul li:last-child{
+    display: inline-block;
     margin-right: 2vw;
 }
 
 .nav-right ul li:last-child a{
+    display: inline-block;
     padding: 3% 6%;
     border-radius: 1em;
     background-color: #3a3153;

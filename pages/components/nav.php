@@ -2,16 +2,14 @@
     <div class="nav-left">
         <a href="/LBU_TeamProject_2024/pages/home/index.php">LOGO</a>
     </div>
-    <div class="nav-middle">
-        <ul>
-            <li><a href="/LBU_TeamProject_2024/pages/home/index.php">HOME</a></li>
-            <li><a href="/LBU_TeamProject_2024/pages/climateControl/climateControl.php">TOOLS</a></li>
-            <li><a href="/LBU_TeamProject_2024/pages/contact/contact.php">CONTACT</a></li>
-        </ul>
-    </div>
     <div class="nav-right">
         <ul>
             <?php
+            if (basename($_SERVER['PHP_SELF']) !== "contact.php") {
+                ?>
+                <li><a href="/LBU_TeamProject_2024/pages/contact/contact.php">CONTACT</a></li>
+                <?php
+            }
             if (basename($_SERVER['PHP_SELF']) === "climateControl.php") {
                 ?>
                 <li><a href="/LBU_TeamProject_2024/pages/auth/signOut.php">SIGN OUT</a></li>
