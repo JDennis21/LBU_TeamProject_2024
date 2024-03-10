@@ -29,29 +29,20 @@ if (isset($_SESSION['username'])) {
             $inputClass = isset($_SESSION["error"]) ? 'noMargin' : '';
             ?>
             <div class="loginForm">
-                <h2>LOGIN</h2>
+                <h2>RECOVER</h2>
                 <form action="../../auth/login/login.php" method="post">
-                    <label for="loginUsername">USERNAME</label>
+                    <label for="loginUsername">EMAIL OR USERNAME</label>
                     <input type="text" name="username" id="loginUsername"
                            value="<?php echo $_SESSION['usernameAttempt'] ?? '' ?>">
-                    <label for="loginPassword">PASSWORD</label>
-                    <input type="password" name="password" id="loginPassword" class="<?php echo $inputClass; ?>">
                     <?php
                     if (isset($_SESSION["error"])) {
                         echo '<p class="error">*' . $_SESSION["error"] . '</p>';
                     }
                     ?>
                     <div style="text-align: center">
-                        <input type="submit" value="LOGIN">
-                        <div class="forgotPass">
-                            <a href="forgotPwd.php">Forgot password?</a>
-                        </div>
+                        <input type="submit" value="RECOVER">
                     </div>
                 </form>
-            </div>
-            <div class="signupBox">
-                <p>Don't have an account with us?</p>
-                <a href="../signup/signupForm.php">SIGN UP</a>
             </div>
         </div>
     </div>
