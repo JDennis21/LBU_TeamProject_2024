@@ -45,7 +45,7 @@ if (!isset($_SESSION['username'])) {
                 </div>
                 <div>
                     <input type="range" min="0" max="100" value="50" class="speed-slider" id="speedSlider">
-                    <div class="speed-value" id="speedValue">50%</div>
+                    <div class="speed-value" id="speedValue">50</div>
                     <button id="resetButton">Reset</button>
                 </div>
             </div>
