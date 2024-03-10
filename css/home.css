@@ -1,0 +1,37 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+.content {
+    flex: 1;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 4%;
+    text-align: center;
+}
+
+.rightBannerContainer {
+    width: 60%;
+    height: 70%;
+    margin-right: 5%;
+    margin-top: 5%;
+    border-radius: 2em;
+    background-color: #3a3153;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.rightBanner img {
+    border-radius: 2em;
+}
+
+.text {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: "Epilogue", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-size: 80px;
+}
