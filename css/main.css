@@ -146,6 +146,10 @@ footer {
     padding: 0;
 }
 
+.footer-left p {
+    font-size: 0.5em;
+}
+
 .footer-middle {
     width: 40%;
     height: 100%;
