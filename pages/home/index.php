@@ -7,7 +7,7 @@ global $connection;
 <head>
     <meta charset="UTF-8">
     <link href="/css/main.css" rel="stylesheet" type="text/css" />
-    <link href="/css/climateControl.css" rel="stylesheet" type="text/css" />
+    <link href="/css/home.css" rel="stylesheet" type="text/css" />
     <title>Site Name</title>
 </head>
 <body>

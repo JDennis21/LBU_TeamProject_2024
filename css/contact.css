@@ -47,6 +47,7 @@
     color: white;
     transition: background-color 0.3s ease;
     border-radius: 2em;
+    cursor: pointer;
 }
 
 .contactForm form input::placeholder, .contactForm form textarea::placeholder {
@@ -94,7 +95,7 @@
 .contactBanner h3:before{
     content: '';
     position: absolute;
-    left: 0%; /* Adjust the position of the circle */
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
     width: 40px;

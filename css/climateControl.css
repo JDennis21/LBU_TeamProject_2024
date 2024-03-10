@@ -13,14 +13,14 @@
 }
 
 .temperature, .humidity, .speed {
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Center content horizontally */
-    align-items: flex-start; /* Center content vertically */
-    width: 250px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
-    margin-right: 100px; /* Adjust spacing between banners */
-    background-color: #3a3153; /* Set the background color */
-    margin-bottom: 10%; /* Adjust spacing between banners */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 250px;
+    height: 200px;
+    margin-right: 100px;
+    background-color: #3a3153;
+    margin-bottom: 10%;
     border-radius: 2em;
 }
 
@@ -89,3 +89,4 @@
     flex-direction: column;
     align-items: center;
 }
+
