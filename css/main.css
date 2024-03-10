@@ -75,39 +75,39 @@ nav ul li a:hover{
     color: #7c6f9d;
 }
 
-.left {
+.nav-left {
     margin-left: 4vw;
     font-size: 1.5em;
     align-self: flex-end;
 }
 
-.left a,
-.left a:visited {
+.nav-left a,
+.nav-left a:visited {
     text-decoration: none;
     color: #3a3153;
     transition: 0.5s;
 }
 
-.left a:hover {
+.nav-left a:hover {
     color: #5f43b2;
 }
 
-.middle ul li:last-child {
+.nav-middle ul li:last-child {
     margin: 0;
 }
 
-.right ul li:last-child{
+.nav-right ul li:last-child{
     margin-right: 2vw;
 }
 
-.right ul li:last-child a{
+.nav-right ul li:last-child a{
     padding: 3% 6%;
     border-radius: 1em;
     background-color: #3a3153;
     transition: background-color 0.3s ease;
 }
 
-.right ul li:last-child a:hover{
+.nav-right ul li:last-child a:hover{
     color: white;
     background-color: #3a3153;
 }
