@@ -1,11 +1,26 @@
 /*main.css*/
+
+/*noinspection CssUnknownTarget*/
+@font-face {
+    font-family: intergralCF;
+    src: url("/LBU_TeamProject_2024/fonts/IntegralCF-regular.otf") format("opentype");
+    font-weight: normal;
+}
+
+/*noinspection CssUnknownTarget*/
+@font-face {
+    font-family: intergralCF;
+    src: url("/LBU_TeamProject_2024/fonts/IntegralCF-bold.otf") format("opentype");
+    font-weight: bold;
+}
+
 * {
     box-sizing: border-box;
 }
 
 html,
 body {
-    font-family: "Epilogue", sans-serif;
+    font-family: "intergralCF", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;

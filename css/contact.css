@@ -1,101 +1,130 @@
+::placeholder {
+    color: black;
+    font-size: 1em;
+}
+
 .content {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 1%;
-    margin-right: 10%;
+}
+
+.formContainer {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.formContainer input,
+.formContainer textarea {
+    font-weight: bold;
+    font-size: 1em;
+    color: black;
 }
 
 .contactForm {
+    height: 60%;
+    width: 50%;
     display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 100%;
-    height: 70%;
-}
-
-.contactForm h2 {
-    margin: 3% 0;
-    font-size: 2em;
+    background-color: white;
+    border: 1px solid black;
+    border-right: none;
 }
 
 .contactForm form {
-    background-color: white;
-    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
     display: flex;
+    flex-wrap: wrap;
+    flex: 1;
     flex-direction: column;
-    width: 45%;
-    padding: 2%;
+    padding: 4%;
 }
 
-.formContent {
-    height: 100%;
+.contactForm h2 {
+    font-size: 2em;
+    margin: 0 0 3% 0;
 }
 
 .inputRow {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 4%;
 }
 
 .inputRow input {
-    width: 48%;
+    flex: 1;
+    max-width: 49%;
     padding: 2%;
 }
 
-.contactForm form input[type="submit"] {
-    align-content: flex-start;
+.contactForm textarea {
+    flex: 1;
+    padding: 2%;
+    margin-bottom: 2%;
+    resize: none;
+}
+
+.contactForm input[type="submit"] {
     width: 22%;
-    padding: 3% 0;
-    margin-bottom: 0;
+    align-content: flex-start;
+    padding: 2% 0;
     border: none;
     background-color: #3a3153;
     color: white;
-    transition: background-color 0.3s ease;
     border-radius: 2em;
     cursor: pointer;
 }
 
-.contactForm form input::placeholder, .contactForm form textarea::placeholder {
-    color: black;
-}
-
-.contactForm form textarea {
-    resize: none;
-    width: 100%;
-    height: 40%;
-    margin: 4% 0;
-}
-
 .contactBanner {
-    background-color: #5f43b2;
-    color: white;
-    padding: 2em;
-    text-align: left;
-    width: 20%;
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
-    margin-left: -27.5%;
-    height: 80%;
-    border-radius: 1.5em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    height: 80%;
+    width: 30%;
+    background-color: #5f43b2;
+    color: white;
+    border: 1px solid black;
+    border-radius: 2em;
+    padding: 3%;
+    text-align: left;
 }
 
-.contactBanner h3 {
-    position: relative;
-    padding-left: 20%;
+.contactBanner .bannerHeader h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 400;
 }
 
-.contactBanner h3:before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    border-radius: 50%;
+.bannerContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
+.bannerInfo {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.bannerInfo h3 {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    margin: 0 0 0 5%;
+    align-content: center;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.circle {
+    width: 3vw;
+    height: 3vw;
+    background-color: white;
+    border-radius: 100%;
+}
