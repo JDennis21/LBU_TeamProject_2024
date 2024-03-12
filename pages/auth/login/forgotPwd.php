@@ -48,7 +48,7 @@ if (isset($_SESSION['username'])) {
     </div>
 </div>
 <?php
-include '../../components/footer.html';
+include '../../components/footer.php';
 //Empty $_SESSION["error"] so that the error message is gone after a page refresh
 unset($_SESSION["error"]);
 ?>

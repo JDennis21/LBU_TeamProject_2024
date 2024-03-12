@@ -83,7 +83,7 @@
     </div>
 </div>
 <?php
-include '../../components/footer.html';
+include '../../components/footer.php';
 $_SESSION = array();
 ?>
 </body>

@@ -52,7 +52,7 @@ if (!isset($_SESSION['username'])) {
         </div>
     </div>
 </div>
-<?php include '../components/footer.html'; ?>
+<?php include '../components/footer.php'; ?>
 <script src="climateControl.js"></script>
 </body>
 </html>

@@ -6,10 +6,16 @@
         </div>
         <div class="footer-middle">
             <div class="banner-container">
-                <div class="banner">
+                <?php
+                if(!isset($_SESSION["username"])) {
+                    ?>
+                    <div class="banner">
                     <div class="banner-text">READY FOR A QUOTE?</div>
                     <a href="/LBU_TeamProject_2024/pages/contact/contact.php" class="banner-button">CONTACT</a>
                 </div>
+                <?php
+                }
+                ?>
             </div>
         </div>
         <div class="footer-right">
