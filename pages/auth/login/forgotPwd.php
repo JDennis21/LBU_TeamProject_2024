@@ -12,7 +12,7 @@ if (isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <link href="/css/main.css" rel="stylesheet" type="text/css" />
     <link href="/css/login.css" rel="stylesheet" type="text/css" />
-    <title>Site Name</title>
+    <title>Climate Control System</title>
 </head>
 <body>
 <?php include '../../components/nav.php'; ?>

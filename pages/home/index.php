@@ -8,7 +8,7 @@ global $connection;
     <meta charset="UTF-8">
     <link href="/css/main.css" rel="stylesheet" type="text/css" />
     <link href="/css/index.css" rel="stylesheet" type="text/css" />
-    <title>Site Name</title>
+    <title>Climate Control System</title>
 </head>
 <body>
 <?php include '../components/nav.php'; ?>
