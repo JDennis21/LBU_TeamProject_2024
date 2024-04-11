@@ -128,3 +128,10 @@
     background-color: white;
     border-radius: 100%;
 }
+
+.success {
+    align-self: flex-end;
+    align-content: center;
+    font-weight: bolder;
+    color: #5f43b2;
+}
