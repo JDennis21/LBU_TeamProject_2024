@@ -10,6 +10,7 @@ if (!isset($_SESSION['username'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="/css/main.css" rel="stylesheet" type="text/css" />
     <link href="/css/climateControl.css" rel="stylesheet" type="text/css" />
     <title>Climate Control System</title>
@@ -24,17 +25,15 @@ if (!isset($_SESSION['username'])) {
                     <p>TEMPERATURE</p>
                 </div>
                 <div class="value">
-                    <p>25°C</p>
+                   <P id="temperature"></P>
                 </div>
             </div>
-
             <div class="humidity">
                 <div class="title">
                     <p>HUMIDITY</p>
                 </div>
-
                 <div class="value">
-                    <p>50%</p>
+                    <p id="humidity"></p>
                 </div>
             </div>
         </div>
@@ -53,6 +52,29 @@ if (!isset($_SESSION['username'])) {
     </div>
 </div>
 <?php include '../components/footer.php'; ?>
+<script>
+    function updateTemperature() {
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:8081/LBU_TeamProject_2024/pages/climateControl/getData.php',
+            dataType: 'json',
+            success: function(result) {
+                // Update the temperature display
+                const temperature = result.temperature;
+                const humidity = result.humidity;
+
+                $('#temperature').text(temperature + '°C');
+                $('#humidity').text(humidity + '%');
+                console.log(temperature, humidity)
+            },
+            error: function() {
+                console.log('Error fetching temperature data.');
+            }
+        });
+    }
+    updateTemperature();
+    setInterval(updateTemperature, 5000);
+</script>
 <script src="climateControl.js"></script>
 </body>
 </html>
