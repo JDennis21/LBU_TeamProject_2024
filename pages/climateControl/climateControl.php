@@ -1,10 +1,30 @@
 <?php
-include '../../pages/connection.php';
+include_once '../../pages/connection.php';
 global $connection;
 
 if (!isset($_SESSION['username'])) {
     header("location: ../../pages/auth/login/loginForm.php");
 }
+
+$speedQuery = "SELECT speed FROM fan";
+$speedResult = mysqli_execute_query($connection, $speedQuery);
+$speed = mysqli_fetch_row($speedResult)[0];
+
+$tempQuery = "SELECT temperature FROM temp";
+$tempResult = mysqli_execute_query($connection, $tempQuery);
+$temp = 0;
+foreach (mysqli_fetch_all($tempResult, MYSQLI_ASSOC) as $row) {
+    $temp += $row["temperature"];
+}
+$averageTemp = $temp/10;
+
+$humidityQuery = "SELECT humidity FROM humidity";
+$humidityResult = mysqli_execute_query($connection, $humidityQuery);
+$humid = 0;
+foreach (mysqli_fetch_all($humidityResult, MYSQLI_ASSOC) as $row) {
+    $humid += $row["humidity"];
+}
+$averageHumid = $humid/10;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +45,7 @@ if (!isset($_SESSION['username'])) {
                     <p>TEMPERATURE</p>
                 </div>
                 <div class="value">
-                   <P id="temperature"></P>
+                   <P id="temperature"><?php echo $averageTemp . '°C'?></P>
                 </div>
             </div>
             <div class="humidity">
@@ -33,7 +53,7 @@ if (!isset($_SESSION['username'])) {
                     <p>HUMIDITY</p>
                 </div>
                 <div class="value">
-                    <p id="humidity"></p>
+                    <p id="humidity"><?php echo $averageHumid . '%'?></p>
                 </div>
             </div>
         </div>
@@ -43,7 +63,7 @@ if (!isset($_SESSION['username'])) {
                     <p>SPEED</p>
                 </div>
                 <div>
-                    <input type="range" min="0" max="100" value="50" class="speed-slider" id="speedSlider">
+                    <input type="range" min="0" max="100" value="<?php echo $speed?>" class="speed-slider" id="speedSlider">
                     <div class="speed-value" id="speedValue">50</div>
                     <button id="resetButton">Reset</button>
                 </div>
