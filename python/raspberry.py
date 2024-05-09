@@ -1,14 +1,22 @@
 import mysql.connector
+import smbus2
+import bme280
 import time
 
 temp_data = []
 humid_data = []
 
+address = 0x76
+
+bus = smbus2.SMBus(1)
+
+calibration_params = bme280.load_calibration_params(bus, address)
+
 # Connect to SQL database
 mydb = mysql.connector.connect(
-    host="localhost",
+    host="192.168.62.162",
     user="root",
-    password="",
+    password="Password1?",
     database="TeamProject"
 )
 
@@ -16,13 +24,15 @@ cursor = mydb.cursor()
 
 
 def collect_temp_data():
-    data = 1
-    return data
+	data = bme280.sample(bus, address, calibration_params)
+	temp = data.temperature
+	return temp
 
 
 def collect_humid_data():
-    data = 2
-    return data
+    data = bme280.sample(bus, address, calibration_params)
+    humid = data.humidity
+    return humid
 
 
 def save_data(temp_data, humid_data):
@@ -52,7 +62,7 @@ while True:
         time.sleep(3)
 
         # Clear old data every 30 seconds
-        if len(temp_data) >= 10:
+        if len(temp_data) >= 1:
             clear_old_data()
             save_data(temp_data, humid_data)
             temp_data = []
