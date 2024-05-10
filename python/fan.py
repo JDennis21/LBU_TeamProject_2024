@@ -26,14 +26,15 @@ def getSpeed():
 
 	cursor = mydb.cursor()
 
-	# Query the database for fan speed
-	cursor.execute("SELECT speed FROM fan")
-	fan_speed = cursor.fetchall()[0][0]# Assuming only one value is returned
-	print("Fan Speed", fan_speed)
-	dc = fan_speed  # Set the duty cycle to the fan speed retrieved from the database
-	pwm.ChangeDutyCycle(dc)
+	cursor = mydb.cursor()  # Create a cursor object to execute SQL queries
 
-	print("Fan duty cycle:", dc)
+	# Query the database for fan speed
+	cursor.execute("SELECT speed FROM fan")  # Execute SQL query to select fan speed
+	fan_speed = cursor.fetchall()[0][0]  # Retrieve fan speed from the query result
+	print("Fan Speed", fan_speed)  # Print the fan speed obtained from the database
+	dc = fan_speed  # Set the duty cycle to the fan speed retrieved from the database
+	pwm.ChangeDutyCycle(dc)  # Update the PWM duty cycle with the new fan speed
+	print("Fan duty cycle:", dc)  # Print the updated duty cycle
 
 try:
     while True:
